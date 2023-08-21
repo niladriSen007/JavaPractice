@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws  InterruptedException {
 
         // Iterable -> collection -> List -> AbstractList ->ArrayList
 //        ArrayList <Integer> listOfAges = new ArrayList<>();
@@ -68,6 +68,77 @@ public class Main {
 //        String threadName = t.getName();
 //        System.out.println(threadName);
 
+//            ThreadClass t1 = new ThreadClass();
+//            t1.start();
+////            t1.join();
+//        try{
+//            for(int i=0;i<5;i++){
+//                t1.join();
+//                System.out.println("Main Thread" + i);
+//                Thread.sleep(2000);
+//            }
+//        }
+//        catch (Exception e){
+//            e.printStackTrace();
+//        }
+
+
+//        Medical m = new Medical("Medical Thread");
+//        TestDrive t = new TestDrive();
+//        OfficerSign o = new OfficerSign();
+//        t.setPriority(10);
+//        m.start();
+////        m.setPriority(10);
+////        System.out.println(m.getName());
+////        System.out.println(m.getPriority());
+//
+//        m.join();
+//
+//        t.start();
+//
+//        t.join();
+//
+//        o.start();
+
+
+//        WithoutSynchronization w1 = new WithoutSynchronization();
+//        Thread1 t1 = new Thread1(w1);
+//        Thread2 t2 = new Thread2(w1);
+//
+//        t1.start();
+//        t2.start();
+
+
+//        SyncBlock s1 = new SyncBlock();
+//        Thread1 t1 = new Thread1(s1);
+//        Thread2 t2 = new Thread2(s1);
+//
+//        t1.start();
+//        t2.start();
+//
+//
+//        SyncBlock s2 = new SyncBlock();
+//        Thread1 t3 = new Thread1(s2);
+//        Thread2 t4 = new Thread2(s2);
+//
+//        t3.start();
+//        t4.start();
+
+
+        WithoutSynchronization w1 = new WithoutSynchronization();
+        Thread1 t1 = new Thread1(w1);
+        Thread2 t2 = new Thread2(w1);
+
+        t1.start();
+        t2.start();
+
+
+        WithoutSynchronization w2 = new WithoutSynchronization();
+        Thread1 t3 = new Thread1(w2);
+        Thread2 t4 = new Thread2(w2);
+
+        t3.start();
+        t4.start();
 
 
 
